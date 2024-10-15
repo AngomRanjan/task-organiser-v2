@@ -8,7 +8,7 @@ const taskReducer = (state, action) => {
       return [...state, { id: nanoid(), task: payload, completed: false }];
     case 'update':
       return state.map((task) =>
-        task.id === payload.id ? { ...task, ...payload.updatedtask } : task
+        task.id === payload.id ? { ...task, ...payload.updatedTask } : task
       );
     case 'delete':
       return state.filter((task) => task.id !== payload);
