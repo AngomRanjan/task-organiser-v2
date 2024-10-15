@@ -1,27 +1,26 @@
-[![](https://img.shields.io/badge/Password%20Generator-Angom%20Chittaranjan-blue)](https://github.com/AngomRanjan)
+[![](https://img.shields.io/badge/Tasks%20Organiser%20V2-Angom%20Chittaranjan-blue)](https://github.com/AngomRanjan)
 
 # Task Organiser v2
 
-> This is the react version of Angom's Task Organiser.
+> This project is a React-based task management application designed to help users organize and track their daily tasks. It allows users to add, update, delete, and toggle task completion, with persistent storage through localStorage. The app offers a simple and intuitive interface, allowing for a seamless task organization experience..
 
 ## Features
 
-- **Task Manager**: ......
-- **Customizable Options**: Toggle the inclusion of numbers and special characters to enhance password complexity.
-- **Real-time Preview**: View the generated password in real-time as options are adjusted.
-- **Copy to Clipboard**: Quickly copy the generated password with a single click for easy use.
+- **Task Manager**: Add, update, delete, and toggle the completion status of tasks. Easily manage multiple tasks with real-time updates.
+- **Task Persistence**: Tasks are saved in localStorage and are automatically loaded on app initialization, preserving state between sessions.
+- **Task Completion**: Quickly mark tasks as completed or pending by toggling the status.
+- **Clear Completed Tasks**: Option to remove all completed tasks with a single click to maintain an organized task list.
 
 ## Learning Curve
 
 This project provided an excellent opportunity to improve my understanding of several key concepts:
 
-- **React Hooks**: Enhanced proficiency with React hooks, particularly in handling state and side effects across components.
-- **Custom Hooks (`usePassword`)**: Developed a custom hook, `usePassword`, to encapsulate the logic for generating and managing password-related state, promoting code reuse and modularity.
-- **Utility Functions (`generatePassword`)**: Created a utility function, `generatePassword`, to handle the logic of generating a password based on specific criteria, which was an exercise in writing clean, reusable code.
-- **Context API**: Leveraged the Context API to share global state across the application, making it easier to manage complex state.
-- **useMemo**: Used `useMemo` to optimize performance by memoizing the password generation, ensuring it only recalculates when the relevant inputs change.
-- **Tailwind CSS**: Applied Tailwind CSS for efficient and responsive styling.
-- **Code Organization**: Followed best practices for organizing code, including using the duck pattern, to improve maintainability and readability.
+- **React Hooks**: Developed a deeper understanding of useReducer for managing complex state and useEffect for handling side effects such as saving tasks to localStorage.
+- **Custom Hooks (`useTasksContextValue`)**: Created a custom hook to encapsulate task management logic, promoting reusability and better code organization.
+- **Context API**: Leveraged the Context API to share task-related state globally, simplifying state management across different components.
+- **useMemo**: Used `useMemo` to optimize task list calculations (e.g., totals of completed and pending tasks) and improve performance by memoizing derived values.
+- **Tailwind CSS**: Applied Tailwind CSS for efficient and responsive styling, focusing on clean design and modern UI practices.
+- **Code Organization**: Adopted best practices for structuring React applications, focusing on modularity and separation of concerns, ensuring scalability and maintainability.
 
 ## Built With
 
