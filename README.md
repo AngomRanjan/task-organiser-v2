@@ -1,12 +1,12 @@
 [![](https://img.shields.io/badge/Password%20Generator-Angom%20Chittaranjan-blue)](https://github.com/AngomRanjan)
 
-# Password Generator
+# Task Organiser v2
 
-> This project is a dynamic and customizable password generator application built with React. It allows users to generate secure, random passwords according to their specified criteria. The application provides a user-friendly interface where users can adjust the password length and choose whether to include numbers and special characters. It also features a convenient copy-to-clipboard functionality to easily copy the generated password.
+> This is the react version of Angom's Task Organiser.
 
 ## Features
 
-- **Dynamic Password Generation**: Generate passwords of varying lengths (8-32 characters) based on user preferences.
+- **Task Manager**: ......
 - **Customizable Options**: Toggle the inclusion of numbers and special characters to enhance password complexity.
 - **Real-time Preview**: View the generated password in real-time as options are adjusted.
 - **Copy to Clipboard**: Quickly copy the generated password with a single click for easy use.
@@ -45,11 +45,11 @@ To get a local copy up and running, follow these simple steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/AngomRanjan/Password-Generator.git
+   git clone git@github.com:AngomRanjan/task-organiser-v2.git
    ```
 2. **Navigate to the project directory:**
    ```bash
-   cd Password-Generator
+   cd task-organiser-v2
    ```
 3. **Install dependencies:**
    ```bash
@@ -64,9 +64,9 @@ To get a local copy up and running, follow these simple steps:
 
 ## Live Demo
 
-[source code](https://github.com/AngomRanjan/Password-Generator.git)
+[source code](https://github.com/AngomRanjan/task-organiser-v2)
 
-[Live Demo](https://angom-password-generator.netlify.app/)
+[Live Demo](#)
 
 ## Author
 
@@ -80,11 +80,11 @@ To get a local copy up and running, follow these simple steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/AngomRanjan/Password-Generator/issues).
+Feel free to check the [issues page](https://github.com/AngomRanjan/task-organiser-v2/issues).
 
 ## Show your support
 
-Give a [⭐️](https://github.com/AngomRanjan/Password-Generator/stargazers) if you like this project!
+Give a [⭐️](https://github.com/AngomRanjan/task-organiser-v2/stargazers) if you like this project!
 
 ## 👣 Track Me
 
