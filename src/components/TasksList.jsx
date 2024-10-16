@@ -1,15 +1,15 @@
 import React from 'react';
 import { useTasksContext } from '../context';
+import TaskItem from './TaskItem';
 
 const TasksList = () => {
   const { tasks } = useTasksContext();
 
   return (
-    <ul className='flex flex-wrap gap-y-3'>
+    <ul className='flex flex-wrap gap-y-3 mt-2'>
       {tasks.map((task) => (
         <li key={task.id} className='w-full'>
-          Id: {task.id} Task: {task.task}. Status:{' '}
-          {task.completed ? 'completed' : 'pending'}
+          <TaskItem task={task} />
         </li>
       ))}
     </ul>
