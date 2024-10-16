@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { TasksProvider, useTasksContext } from '../../context';
-// import { nanoid } from 'nanoid';
 
 // Mock nanoid for consistent ID generation in tests
 jest.mock('nanoid', () => ({
