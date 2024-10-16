@@ -65,7 +65,7 @@ To get a local copy up and running, follow these simple steps:
 
 [source code](https://github.com/AngomRanjan/task-organiser-v2)
 
-[Live Demo](#)
+[Live Demo](https://tasks-organiser-v2.netlify.app/)
 
 ## Author
 
