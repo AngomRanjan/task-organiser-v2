@@ -4,9 +4,8 @@ import { useTasksContext } from '../context';
 const AddTask = () => {
   const [task, setTask] = useState('');
   const [isError, setIsError] = useState(false);
+  const [errMsg, setErrMsg] = useState('');
   const { addTask } = useTasksContext();
-
-  let errMsg = '';
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,20 +14,18 @@ const AddTask = () => {
       addTask(task);
       setTask('');
     } catch (error) {
-      errMsg = error.message;
+      setErrMsg(error.message);
       setIsError(true);
       setTimeout(() => {
         setIsError(false);
-        errMsg = '';
+        setErrMsg('');
       }, 4000);
     }
   };
 
   return (
     <>
-      {isError && (
-        <p className='text-red-600 text-xs'>Adding Task Failed! {errMsg}</p>
-      )}
+      {isError && <p className='text-red-600 text-xs'>{errMsg}</p>}
       <form onSubmit={handleSubmit} className='flex'>
         <input
           type='text'
