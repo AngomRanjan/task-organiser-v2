@@ -1,3 +1,4 @@
+import AcConfirm from './components/AcConfirm';
 import AddTask from './components/AddTask';
 import ClearCompletedTasks from './components/ClearCompletedTasks';
 import TasksInfoBar from './components/TasksInfoBar';
@@ -21,6 +22,11 @@ const App = () => {
             <TasksList />
             <ClearCompletedTasks />
           </section>
+          <AcConfirm
+            isOpen={true}
+            onClose={() => setIsAcConfirmOpen(false)} // Close modal function
+            onConfirm={() => setIsAcConfirmOpen(false)} // Confirm function
+          />
         </main>
         <footer className='flex w-full bg-gradient-to-t from-[#deecf8] to-[#f8fafa] p-4 sticky bottom-0'>
           Copyright. Angom. 2022.
