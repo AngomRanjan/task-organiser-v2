@@ -5,7 +5,7 @@ const taskReducer = (state, action) => {
   const { type, payload } = action;
   switch (type) {
     case 'add':
-      return [...state, { id: nanoid(), task: payload, completed: false }];
+      return [{ id: nanoid(), task: payload, completed: false }, ...state];
     case 'update':
       return state.map((task) =>
         task.id === payload.id ? { ...task, ...payload.updatedTask } : task
@@ -40,7 +40,12 @@ export const useTasksContextValue = () => {
   const completedTotal = tasks.filter((todo) => todo.completed).length || 0;
   const pendingTotal = total - completedTotal;
 
+  const isAlreadyExists = (task) => tasks.some((item) => item.task === task);
+
   const addTask = (task) => {
+    if (isAlreadyExists(task)) {
+      throw new Error('Task Already Exists!. Tasks not Added.');
+    }
     dispatch({ type: 'add', payload: task });
   };
 
