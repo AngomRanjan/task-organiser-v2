@@ -32,7 +32,7 @@ const AcConfirm = ({
         </h2>
         <p className='pl-4 mb-1'>You are about to :</p>
         <p className='pl-8 mb-2'>{confirmMessage}</p>
-        <p className='pl-4 mb-4'>Click OK to confirm.</p>
+        <p className='pl-4 mb-4'>Are you sure? Click OK to confirm.</p>
         <div className='flex justify-center gap-2'>
           <button
             onClick={() => {

@@ -1,9 +1,11 @@
 import { useRef, useState } from 'react';
 import { useTasksContext } from '../context';
+import AcConfirm from './AcConfirm';
 
 function TaskItem({ task }) {
   const [isTaskEditable, setIsTaskEditable] = useState(false);
   const [taskMsg, setTaskMsg] = useState(task.task);
+  const [isAcConfirmOpen, setIsAcConfirmOpen] = useState();
   const refEditInput = useRef();
 
   const { updateTask, deleteTask, toggleComplete } = useTasksContext();
@@ -25,6 +27,11 @@ function TaskItem({ task }) {
       setIsTaskEditable((prev) => !prev);
       refEditInput.current?.select();
     }
+  };
+
+  const handleDelete = () => {
+    deleteTask(task.id);
+    setIsAcConfirmOpen(false);
   };
 
   return (
@@ -63,11 +70,18 @@ function TaskItem({ task }) {
       </button>
       <button
         className='inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0 disabled:opacity-50 disabled:cursor-not-allowed'
-        onClick={() => deleteTask(task.id)}
+        onClick={() => setIsAcConfirmOpen(true)}
         disabled={isTaskEditable}
       >
         ❌
       </button>
+
+      <AcConfirm
+        isOpen={isAcConfirmOpen}
+        onClose={() => setIsAcConfirmOpen(false)} // Close modal function
+        onConfirm={handleDelete} // Confirm function
+        confirmMessage={`Delete the task "${task.task}"`}
+      />
     </div>
   );
 }
