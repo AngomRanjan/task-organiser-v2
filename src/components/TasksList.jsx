@@ -6,7 +6,7 @@ const TasksList = () => {
   const { tasks } = useTasksContext();
 
   return (
-    <ul className='flex flex-wrap gap-y-3 mt-2'>
+    <ul className='flex flex-wrap gap-y-3 mt-3'>
       {tasks.map((task) => (
         <li key={task.id} className='w-full'>
           <TaskItem task={task} />
