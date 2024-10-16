@@ -16,6 +16,7 @@ const AddTask = () => {
     <form onSubmit={handleSubmit} className='flex'>
       <input
         type='text'
+        id='new-task-input'
         placeholder='Enter New Tasks...'
         className='w-full border border-black/10 rounded-l-lg px-3 outline-none duration-150 bg-white/20 py-1.5'
         value={task}

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useRef, useState } from 'react';
 import { useTasksContext } from '../context';
 
@@ -36,6 +35,7 @@ function TaskItem({ task }) {
     >
       <input
         type='checkbox'
+        id={`status-cb-${task.id}`}
         className="cursor-pointer text-xs appearance-none outline outline-1 w-[1.25rem] h-[1.15rem] border border-slate-900 bg-slate-100 checked:before:content-['\2714'] disabled:opacity-50 disabled:cursor-not-allowed"
         checked={task.completed}
         onChange={toggleCompleted}
@@ -43,6 +43,7 @@ function TaskItem({ task }) {
       />
       <input
         type='text'
+        id={`task-input-${task.id}`}
         className={`border outline-none w-full bg-transparent rounded-lg ${
           isTaskEditable
             ? 'border-black/10 px-2'

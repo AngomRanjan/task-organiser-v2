@@ -1,4 +1,5 @@
 import AddTask from './components/AddTask';
+import ClearCompletedTasks from './components/ClearCompletedTasks';
 import TasksInfoBar from './components/TasksInfoBar';
 import TasksList from './components/TasksList';
 import { TasksProvider, useTasksContextValue } from './context';
@@ -18,6 +19,7 @@ const App = () => {
             <TasksInfoBar />
             <AddTask />
             <TasksList />
+            <ClearCompletedTasks />
           </section>
         </main>
         <footer className='flex w-full bg-gradient-to-t from-[#deecf8] to-[#f8fafa] p-4 sticky bottom-0'>
